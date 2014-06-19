@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D74FCD06195155B200CE67A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD05195155B200CE67A9 /* AppDelegate.swift */; };
+		D74FCD08195155B200CE67A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD07195155B200CE67A9 /* Images.xcassets */; };
+		D74FCD14195155B200CE67A9 /* LynxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD13195155B200CE67A9 /* LynxTests.swift */; };
+		D74FCD1E195155C200CE67A9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD1D195155C200CE67A9 /* MainStoryboard.storyboard */; };
+		D74FCD201951561500CE67A9 /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD1F1951561500CE67A9 /* StationListViewController.swift */; };
+		D74FCD23195157C500CE67A9 /* routes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD22195157C500CE67A9 /* routes.txt */; };
+		D74FCD2619528D6D00CE67A9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD2519528D6D00CE67A9 /* Route.swift */; };
+		D74FCD2819528EAF00CE67A9 /* trips.txt in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD2719528EAF00CE67A9 /* trips.txt */; };
+		D74FCD2A19528EB800CE67A9 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD2919528EB800CE67A9 /* Trip.swift */; };
+		D74FCD2C19528F1D00CE67A9 /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD2B19528F1D00CE67A9 /* stops.txt */; };
+		D74FCD2E19528F2600CE67A9 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD2D19528F2600CE67A9 /* Stop.swift */; };
+		D74FCD3019528FD500CE67A9 /* shapes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD2F19528FD500CE67A9 /* shapes.txt */; };
+		D74FCD3219528FDA00CE67A9 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD3119528FDA00CE67A9 /* Shape.swift */; };
+		D74FCD341952909400CE67A9 /* stop_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD331952909400CE67A9 /* stop_times.txt */; };
+		D74FCD361952909C00CE67A9 /* StopTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD351952909C00CE67A9 /* StopTime.swift */; };
+		D74FCD39195291C800CE67A9 /* RouteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD38195291C800CE67A9 /* RouteListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D74FCD0E195155B200CE67A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D74FCCF8195155B200CE67A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D74FCCFF195155B200CE67A9;
+			remoteInfo = Lynx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D74FCD00195155B200CE67A9 /* Lynx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lynx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74FCD04195155B200CE67A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74FCD05195155B200CE67A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D74FCD07195155B200CE67A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D74FCD0D195155B200CE67A9 /* LynxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LynxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74FCD12195155B200CE67A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74FCD13195155B200CE67A9 /* LynxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LynxTests.swift; sourceTree = "<group>"; };
+		D74FCD1D195155C200CE67A9 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D74FCD1F1951561500CE67A9 /* StationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		D74FCD22195157C500CE67A9 /* routes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = routes.txt; sourceTree = "<group>"; };
+		D74FCD2519528D6D00CE67A9 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		D74FCD2719528EAF00CE67A9 /* trips.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trips.txt; sourceTree = "<group>"; };
+		D74FCD2919528EB800CE67A9 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		D74FCD2B19528F1D00CE67A9 /* stops.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stops.txt; sourceTree = "<group>"; };
+		D74FCD2D19528F2600CE67A9 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		D74FCD2F19528FD500CE67A9 /* shapes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shapes.txt; sourceTree = "<group>"; };
+		D74FCD3119528FDA00CE67A9 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		D74FCD331952909400CE67A9 /* stop_times.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stop_times.txt; sourceTree = "<group>"; };
+		D74FCD351952909C00CE67A9 /* StopTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTime.swift; sourceTree = "<group>"; };
+		D74FCD38195291C800CE67A9 /* RouteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteListViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D74FCCFD195155B200CE67A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74FCD0A195155B200CE67A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D74FCCF7195155B200CE67A9 = {
+			isa = PBXGroup;
+			children = (
+				D74FCD02195155B200CE67A9 /* Lynx */,
+				D74FCD10195155B200CE67A9 /* LynxTests */,
+				D74FCD01195155B200CE67A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D74FCD01195155B200CE67A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD00195155B200CE67A9 /* Lynx.app */,
+				D74FCD0D195155B200CE67A9 /* LynxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D74FCD02195155B200CE67A9 /* Lynx */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD3A1952930900CE67A9 /* Libraries */,
+				D74FCD21195157BB00CE67A9 /* Files */,
+				D74FCD2419528D6500CE67A9 /* Models */,
+				D74FCD37195291AE00CE67A9 /* Controllers */,
+				D74FCD05195155B200CE67A9 /* AppDelegate.swift */,
+				D74FCD07195155B200CE67A9 /* Images.xcassets */,
+				D74FCD03195155B200CE67A9 /* Supporting Files */,
+				D74FCD1D195155C200CE67A9 /* MainStoryboard.storyboard */,
+			);
+			path = Lynx;
+			sourceTree = "<group>";
+		};
+		D74FCD03195155B200CE67A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD04195155B200CE67A9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D74FCD10195155B200CE67A9 /* LynxTests */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD13195155B200CE67A9 /* LynxTests.swift */,
+				D74FCD11195155B200CE67A9 /* Supporting Files */,
+			);
+			path = LynxTests;
+			sourceTree = "<group>";
+		};
+		D74FCD11195155B200CE67A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD12195155B200CE67A9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D74FCD21195157BB00CE67A9 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD331952909400CE67A9 /* stop_times.txt */,
+				D74FCD2F19528FD500CE67A9 /* shapes.txt */,
+				D74FCD2B19528F1D00CE67A9 /* stops.txt */,
+				D74FCD2719528EAF00CE67A9 /* trips.txt */,
+				D74FCD22195157C500CE67A9 /* routes.txt */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		D74FCD2419528D6500CE67A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD2519528D6D00CE67A9 /* Route.swift */,
+				D74FCD2919528EB800CE67A9 /* Trip.swift */,
+				D74FCD2D19528F2600CE67A9 /* Stop.swift */,
+				D74FCD3119528FDA00CE67A9 /* Shape.swift */,
+				D74FCD351952909C00CE67A9 /* StopTime.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D74FCD37195291AE00CE67A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCD38195291C800CE67A9 /* RouteListViewController.swift */,
+				D74FCD1F1951561500CE67A9 /* StationListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D74FCD3A1952930900CE67A9 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D74FCCFF195155B200CE67A9 /* Lynx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D74FCD17195155B200CE67A9 /* Build configuration list for PBXNativeTarget "Lynx" */;
+			buildPhases = (
+				D74FCCFC195155B200CE67A9 /* Sources */,
+				D74FCCFD195155B200CE67A9 /* Frameworks */,
+				D74FCCFE195155B200CE67A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lynx;
+			productName = Lynx;
+			productReference = D74FCD00195155B200CE67A9 /* Lynx.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D74FCD0C195155B200CE67A9 /* LynxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D74FCD1A195155B200CE67A9 /* Build configuration list for PBXNativeTarget "LynxTests" */;
+			buildPhases = (
+				D74FCD09195155B200CE67A9 /* Sources */,
+				D74FCD0A195155B200CE67A9 /* Frameworks */,
+				D74FCD0B195155B200CE67A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D74FCD0F195155B200CE67A9 /* PBXTargetDependency */,
+			);
+			name = LynxTests;
+			productName = LynxTests;
+			productReference = D74FCD0D195155B200CE67A9 /* LynxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D74FCCF8195155B200CE67A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Andrew Kozlik";
+				TargetAttributes = {
+					D74FCCFF195155B200CE67A9 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					D74FCD0C195155B200CE67A9 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = D74FCCFF195155B200CE67A9;
+					};
+				};
+			};
+			buildConfigurationList = D74FCCFB195155B200CE67A9 /* Build configuration list for PBXProject "Lynx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D74FCCF7195155B200CE67A9;
+			productRefGroup = D74FCD01195155B200CE67A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D74FCCFF195155B200CE67A9 /* Lynx */,
+				D74FCD0C195155B200CE67A9 /* LynxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D74FCCFE195155B200CE67A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74FCD1E195155C200CE67A9 /* MainStoryboard.storyboard in Resources */,
+				D74FCD2C19528F1D00CE67A9 /* stops.txt in Resources */,
+				D74FCD341952909400CE67A9 /* stop_times.txt in Resources */,
+				D74FCD2819528EAF00CE67A9 /* trips.txt in Resources */,
+				D74FCD08195155B200CE67A9 /* Images.xcassets in Resources */,
+				D74FCD3019528FD500CE67A9 /* shapes.txt in Resources */,
+				D74FCD23195157C500CE67A9 /* routes.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74FCD0B195155B200CE67A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D74FCCFC195155B200CE67A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74FCD361952909C00CE67A9 /* StopTime.swift in Sources */,
+				D74FCD2A19528EB800CE67A9 /* Trip.swift in Sources */,
+				D74FCD39195291C800CE67A9 /* RouteListViewController.swift in Sources */,
+				D74FCD3219528FDA00CE67A9 /* Shape.swift in Sources */,
+				D74FCD2619528D6D00CE67A9 /* Route.swift in Sources */,
+				D74FCD2E19528F2600CE67A9 /* Stop.swift in Sources */,
+				D74FCD06195155B200CE67A9 /* AppDelegate.swift in Sources */,
+				D74FCD201951561500CE67A9 /* StationListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74FCD09195155B200CE67A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74FCD14195155B200CE67A9 /* LynxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D74FCD0F195155B200CE67A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D74FCCFF195155B200CE67A9 /* Lynx */;
+			targetProxy = D74FCD0E195155B200CE67A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D74FCD15195155B200CE67A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D74FCD16195155B200CE67A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D74FCD18195155B200CE67A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Lynx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D74FCD19195155B200CE67A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Lynx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D74FCD1B195155B200CE67A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lynx.app/Lynx";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LynxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		D74FCD1C195155B200CE67A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lynx.app/Lynx";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LynxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D74FCCFB195155B200CE67A9 /* Build configuration list for PBXProject "Lynx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D74FCD15195155B200CE67A9 /* Debug */,
+				D74FCD16195155B200CE67A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D74FCD17195155B200CE67A9 /* Build configuration list for PBXNativeTarget "Lynx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D74FCD18195155B200CE67A9 /* Debug */,
+				D74FCD19195155B200CE67A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D74FCD1A195155B200CE67A9 /* Build configuration list for PBXNativeTarget "LynxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D74FCD1B195155B200CE67A9 /* Debug */,
+				D74FCD1C195155B200CE67A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D74FCCF8195155B200CE67A9 /* Project object */;
+}
