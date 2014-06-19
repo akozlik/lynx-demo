@@ -111,15 +111,16 @@ class RouteListViewController : UITableViewController {
         for element in elements {
             
             var route_id = element["route_id"]?.integerValue
-            var route_short_name = element["route_short_name"]?.stringValue
-            var route_long_name = element["route_long_name"]?.stringValue
+            var route_short_name = element["route_short_name"] as String?
+            var route_long_name = element["route_long_name"] as String?
             var route_type = element["route_type"]?.integerValue
-
-//            var route = Route(route_id: route_id, route_short_name: route_short_name, route_long_name: route_long_name, route_type: route_type)
+            
+            var route = Route(route_id: route_id, route_short_name: route_short_name, route_long_name: route_long_name, route_type: route_type)
             
 //            routes.append(route)
 
             println(route_long_name)
+            println(element["route_short_name"])
 
 //            println(element)
         }
