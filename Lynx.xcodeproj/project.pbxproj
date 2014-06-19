@@ -97,6 +97,7 @@
 		D74FCD02195155B200CE67A9 /* Lynx */ = {
 			isa = PBXGroup;
 			children = (
+				D74FCD3B1952936D00CE67A9 /* Classes */,
 				D74FCD3A1952930900CE67A9 /* Libraries */,
 				D74FCD21195157BB00CE67A9 /* Files */,
 				D74FCD2419528D6500CE67A9 /* Models */,
@@ -172,6 +173,13 @@
 			children = (
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		D74FCD3B1952936D00CE67A9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,9 +397,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lynx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -400,9 +411,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lynx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -461,6 +474,7 @@
 				D74FCD19195155B200CE67A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D74FCD1A195155B200CE67A9 /* Build configuration list for PBXNativeTarget "LynxTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +483,7 @@
 				D74FCD1C195155B200CE67A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

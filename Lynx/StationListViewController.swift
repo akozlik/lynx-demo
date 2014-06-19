@@ -15,5 +15,4 @@ class StationListViewController : UITableViewController {
         println("Something")
     }
     
-    
 }
