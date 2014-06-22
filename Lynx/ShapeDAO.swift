@@ -15,6 +15,33 @@ class ShapeDAO : CSVDAO {
         
         var shapePoints : Shape[] = []
         
+        var foundShapes : String[] = []
+        
+        for line in lines {
+            
+            var shape_id_line = line["shape_id"]!
+
+            var found = false;
+            
+            if (shape_id == shape_id_line) {
+                found = true;
+                
+                var shape_pt_lat : Double = NSString(line["shape_pt_lat"]!).doubleValue
+                var shape_pt_lon : Double = NSString(line["shape_pt_lon"]!).doubleValue
+                var shape_pt_sequence = line["shape_pt_sequence"]!
+                var shape_dist_traveled : Double = NSString(line["shape_dist_traveled"]!).doubleValue
+                
+                var shape = Shape(shape_id: shape_id, shape_pt_lat: shape_pt_lat, shape_pt_lon: shape_pt_lon, shape_pt_sequence: shape_pt_sequence, shape_dist_traveled: shape_dist_traveled)
+                
+                shapePoints.append(shape)
+                
+            }
+            
+            if (found && shape_id_line != shape_id) {
+                break;
+            }
+        }
+        
         return shapePoints
     }
 }

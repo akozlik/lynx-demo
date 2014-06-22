@@ -9,8 +9,7 @@
 import Foundation
 
 class CSVDAO {
-    func loadCSVLines(filename:String, type:String, parameter:Dictionary<String, String>?) -> Dictionary<String, String>[] {
-        println("\(filename).\(type)")
+    func loadCSVLines(filename:String, type:String) -> Dictionary<String, String>[] {
         
         var path = NSBundle.mainBundle().pathForResource(filename, ofType:type)
         

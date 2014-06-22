@@ -24,14 +24,14 @@ class TripsDAO : CSVDAO {
         
         var start = 0
         
+        var shape_ids : String[] = []
+        
         for line in tripLines {
 
             var route_id_line = line["route_id"]
             
             if route_id_line == route.route_id {
                 found = true
-                
-                println(line)
                 
                 var route_id = line["route_id"]!
                 var service_id = line["service_id"]!
@@ -41,8 +41,19 @@ class TripsDAO : CSVDAO {
                 
                 var trip = Trip(route_id: route_id, service_id: service_id, trip_id: trip_id, direction_id: direction_id, shape_id: shape_id, route: route)
                 
-                trips.append(trip)
                 
+                var found = false;
+                for temp_shape_id in shape_ids {
+                    println("\(temp_shape_id) = \(shape_id)")
+                    if temp_shape_id == shape_id {
+                        found = true;
+                    }
+                }
+                
+                if (!found) {
+                    trips.append(trip)
+                    shape_ids.append(shape_id)
+                }
             }
             
             // Check to see if we reached the end of the group

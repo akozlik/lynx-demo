@@ -14,12 +14,19 @@ class ShapeMapViewController : UIViewController {
     
     @IBOutlet var mapView : MKMapView =  MKMapView()
     
-    var shape = Shape()
+    var shapePoints : Shape[] = []
     
     override func viewDidLoad()  {
         
-
-        mapView.centerCoordinate = shape.coordinate
+        for shape in shapePoints {
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = shape.coordinate
+            annotation.title = "Something"
+            mapView.addAnnotation(annotation)
+            
+            var region = MKCoordinateRegionMake(annotation.coordinate, MKCoordinateSpanMake(0.1, 0.1))
+            mapView.setRegion(region, animated: false)
+        }
     }
     
     

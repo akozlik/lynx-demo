@@ -13,6 +13,7 @@ class TripListViewController : UITableViewController {
     var route : Route = Route(route_id: "", route_short_name: "", route_long_name: "", route_type: "")
     var trips : Trip[] = []
     var shape : Shape = Shape(shape_id: "0", shape_pt_lat: 0.0, shape_pt_lon: 0.0, shape_pt_sequence: "0", shape_dist_traveled: 0.0)
+    var shapePoints : Shape[] = []
     
     override func viewDidLoad()  {
         self.title = "Trips"
@@ -45,19 +46,20 @@ class TripListViewController : UITableViewController {
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)  {
         
         var trip = self.trips[indexPath.row]
+
+
+        self.shapePoints = ShapeDAO().getShapePointsForShapeID(trip.shape_id) as Shape[]
         
-        var shapePoints = ShapeDAO().getShapePointsForShapeID(trip.shape_id)
-        println(shapePoints)
+
+        self.performSegueWithIdentifier("shapeMap", sender: self)
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)  {
-        println(segue.identifier)
+
         if segue.identifier == "shapeMap" {
             var shapeVC : ShapeMapViewController = segue.destinationViewController as ShapeMapViewController
-            shapeVC.shape = sender as Shape
-            
-            println(shapeVC.shape.shape_id)
-            
+            shapeVC.shapePoints = self.shapePoints
         }
     }
 }
