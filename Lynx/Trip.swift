@@ -9,15 +9,15 @@
 import Foundation
 
 class Trip {
-    var route_id : Int
-    var service_id : Int
-    var trip_id : Int
-    var direction_id : Int
-    var shape_id : Int
+    var route_id : String
+    var service_id : String
+    var trip_id : String
+    var direction_id : String
+    var shape_id : String
     
     var route : Route
     
-    init(route_id:Int, service_id:Int, trip_id:Int, direction_id:Int, shape_id:Int, route: Route) {
+    init(route_id:String, service_id:String, trip_id:String, direction_id:String, shape_id:String, route: Route) {
         self.route_id = route_id
         self.service_id = service_id
         self.trip_id = trip_id

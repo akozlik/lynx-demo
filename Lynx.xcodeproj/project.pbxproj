@@ -23,6 +23,13 @@
 		D74FCD341952909400CE67A9 /* stop_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD331952909400CE67A9 /* stop_times.txt */; };
 		D74FCD361952909C00CE67A9 /* StopTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD351952909C00CE67A9 /* StopTime.swift */; };
 		D74FCD39195291C800CE67A9 /* RouteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD38195291C800CE67A9 /* RouteListViewController.swift */; };
+		D76489891956A79600EF31A4 /* calendar.txt in Resources */ = {isa = PBXBuildFile; fileRef = D76489881956A79600EF31A4 /* calendar.txt */; };
+		D764898B1956A83000EF31A4 /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D764898A1956A83000EF31A4 /* TripListViewController.swift */; };
+		D764898D1956A9BC00EF31A4 /* CSVDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D764898C1956A9BC00EF31A4 /* CSVDAO.swift */; };
+		D76489901956AA4600EF31A4 /* RoutesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D764898F1956AA4600EF31A4 /* RoutesDAO.swift */; };
+		D76489931956AA9100EF31A4 /* TripsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76489921956AA9100EF31A4 /* TripsDAO.swift */; };
+		D76489951956B3B100EF31A4 /* ShapeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76489941956B3B100EF31A4 /* ShapeMapViewController.swift */; };
+		D76489971956B9A100EF31A4 /* ShapeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76489961956B9A100EF31A4 /* ShapeDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,13 @@
 		D74FCD331952909400CE67A9 /* stop_times.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stop_times.txt; sourceTree = "<group>"; };
 		D74FCD351952909C00CE67A9 /* StopTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTime.swift; sourceTree = "<group>"; };
 		D74FCD38195291C800CE67A9 /* RouteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteListViewController.swift; sourceTree = "<group>"; };
+		D76489881956A79600EF31A4 /* calendar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendar.txt; sourceTree = "<group>"; };
+		D764898A1956A83000EF31A4 /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
+		D764898C1956A9BC00EF31A4 /* CSVDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVDAO.swift; sourceTree = "<group>"; };
+		D764898F1956AA4600EF31A4 /* RoutesDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesDAO.swift; sourceTree = "<group>"; };
+		D76489921956AA9100EF31A4 /* TripsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsDAO.swift; sourceTree = "<group>"; };
+		D76489941956B3B100EF31A4 /* ShapeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeMapViewController.swift; sourceTree = "<group>"; };
+		D76489961956B9A100EF31A4 /* ShapeDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +152,7 @@
 		D74FCD21195157BB00CE67A9 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				D76489881956A79600EF31A4 /* calendar.txt */,
 				D74FCD331952909400CE67A9 /* stop_times.txt */,
 				D74FCD2F19528FD500CE67A9 /* shapes.txt */,
 				D74FCD2B19528F1D00CE67A9 /* stops.txt */,
@@ -163,7 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				D74FCD38195291C800CE67A9 /* RouteListViewController.swift */,
+				D764898A1956A83000EF31A4 /* TripListViewController.swift */,
 				D74FCD1F1951561500CE67A9 /* StationListViewController.swift */,
+				D76489941956B3B100EF31A4 /* ShapeMapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +195,10 @@
 		D74FCD3B1952936D00CE67A9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D764898C1956A9BC00EF31A4 /* CSVDAO.swift */,
+				D764898F1956AA4600EF31A4 /* RoutesDAO.swift */,
+				D76489921956AA9100EF31A4 /* TripsDAO.swift */,
+				D76489961956B9A100EF31A4 /* ShapeDAO.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -265,6 +286,7 @@
 				D74FCD2C19528F1D00CE67A9 /* stops.txt in Resources */,
 				D74FCD341952909400CE67A9 /* stop_times.txt in Resources */,
 				D74FCD2819528EAF00CE67A9 /* trips.txt in Resources */,
+				D76489891956A79600EF31A4 /* calendar.txt in Resources */,
 				D74FCD08195155B200CE67A9 /* Images.xcassets in Resources */,
 				D74FCD3019528FD500CE67A9 /* shapes.txt in Resources */,
 				D74FCD23195157C500CE67A9 /* routes.txt in Resources */,
@@ -285,14 +307,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D764898B1956A83000EF31A4 /* TripListViewController.swift in Sources */,
+				D76489901956AA4600EF31A4 /* RoutesDAO.swift in Sources */,
 				D74FCD361952909C00CE67A9 /* StopTime.swift in Sources */,
 				D74FCD2A19528EB800CE67A9 /* Trip.swift in Sources */,
 				D74FCD39195291C800CE67A9 /* RouteListViewController.swift in Sources */,
 				D74FCD3219528FDA00CE67A9 /* Shape.swift in Sources */,
+				D764898D1956A9BC00EF31A4 /* CSVDAO.swift in Sources */,
 				D74FCD2619528D6D00CE67A9 /* Route.swift in Sources */,
+				D76489971956B9A100EF31A4 /* ShapeDAO.swift in Sources */,
 				D74FCD2E19528F2600CE67A9 /* Stop.swift in Sources */,
 				D74FCD06195155B200CE67A9 /* AppDelegate.swift in Sources */,
+				D76489951956B3B100EF31A4 /* ShapeMapViewController.swift in Sources */,
 				D74FCD201951561500CE67A9 /* StationListViewController.swift in Sources */,
+				D76489931956AA9100EF31A4 /* TripsDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

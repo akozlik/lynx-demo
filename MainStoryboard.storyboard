@@ -26,10 +26,70 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="mPp-o7-L7b"/>
+                    <connections>
+                        <segue destination="CPL-Tj-at4" kind="push" identifier="tripList" id="1my-i2-bCl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvb-YY-NAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="506" y="380"/>
+        </scene>
+        <!--Trip List View Controller-->
+        <scene sceneID="3NZ-IN-oWR">
+            <objects>
+                <tableViewController storyboardIdentifier="TripListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CPL-Tj-at4" customClass="TripListViewController" customModule="Lynx" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xne-y7-aqY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="HfE-Jd-sPj">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HfE-Jd-sPj" id="hSh-UM-Yvm">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CPL-Tj-at4" id="m8d-cA-E3L"/>
+                            <outlet property="delegate" destination="CPL-Tj-at4" id="4bi-mQ-M31"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Bqk-Qh-Nsd"/>
+                    <connections>
+                        <segue destination="Ux5-zd-Dgv" kind="push" identifier="shapeMap" id="LAu-7R-Fr0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTc-bQ-fKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="352"/>
+        </scene>
+        <!--Shape Map View Controller-->
+        <scene sceneID="bl4-e0-7hw">
+            <objects>
+                <viewController storyboardIdentifier="ShapeMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ux5-zd-Dgv" customClass="ShapeMapViewController" customModule="Lynx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dcw-A2-gg3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rah-M1-DQe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rBL-uW-WS3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v8A-gR-BJ5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yTD-Hq-mx8"/>
+                    <connections>
+                        <outlet property="mapView" destination="v8A-gR-BJ5" id="WzR-3r-gFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfv-GH-gHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hRR-Uo-lXe">

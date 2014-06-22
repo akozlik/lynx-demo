@@ -9,12 +9,12 @@
 import Foundation
 
 class Route {
-    var route_id: Int
+    var route_id: String
     var route_short_name : String
     var route_long_name : String
-    var route_type : Int
+    var route_type : String
     
-    init(route_id:Int, route_short_name:String, route_long_name:String, route_type:Int) {
+    init(route_id:String, route_short_name:String, route_long_name:String, route_type:String) {
         self.route_id = route_id
         self.route_short_name = route_short_name
         self.route_long_name = route_long_name
