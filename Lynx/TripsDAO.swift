@@ -19,6 +19,8 @@ class TripsDAO : CSVDAO {
         var trips : Trip[] = [];
         
         var tripLines = self.loadCSVLines("trips", type: "txt")
+        
+        var stopTimes = self.loadCSVLines("stop_times", type: "txt")
 
         var found = false
         
@@ -44,7 +46,6 @@ class TripsDAO : CSVDAO {
                 
                 var found = false;
                 for temp_shape_id in shape_ids {
-                    println("\(temp_shape_id) = \(shape_id)")
                     if temp_shape_id == shape_id {
                         found = true;
                     }

@@ -13,8 +13,6 @@ class CSVDAO {
         
         var path = NSBundle.mainBundle().pathForResource(filename, ofType:type)
         
-        println(path)
-        
         // Make sure we've got a file there
         var returnElements : Dictionary<String, String>[] = []
         if (path) {

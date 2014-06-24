@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70B547C19590F5D00442B67 /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B547B19590F5D00442B67 /* MapDelegate.swift */; };
 		D74FCD06195155B200CE67A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD05195155B200CE67A9 /* AppDelegate.swift */; };
 		D74FCD08195155B200CE67A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74FCD07195155B200CE67A9 /* Images.xcassets */; };
 		D74FCD14195155B200CE67A9 /* LynxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FCD13195155B200CE67A9 /* LynxTests.swift */; };
@@ -30,6 +31,8 @@
 		D76489931956AA9100EF31A4 /* TripsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76489921956AA9100EF31A4 /* TripsDAO.swift */; };
 		D76489951956B3B100EF31A4 /* ShapeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76489941956B3B100EF31A4 /* ShapeMapViewController.swift */; };
 		D76489971956B9A100EF31A4 /* ShapeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76489961956B9A100EF31A4 /* ShapeDAO.swift */; };
+		D7F039F2195929A9001689B3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F039F1195929A9001689B3 /* MapView.swift */; };
+		D7F03A1F195930C7001689B3 /* lynx-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D7F03A1E195930C7001689B3 /* lynx-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D70B547B19590F5D00442B67 /* MapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		D74FCD00195155B200CE67A9 /* Lynx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lynx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74FCD04195155B200CE67A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74FCD05195155B200CE67A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		D76489921956AA9100EF31A4 /* TripsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsDAO.swift; sourceTree = "<group>"; };
 		D76489941956B3B100EF31A4 /* ShapeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeMapViewController.swift; sourceTree = "<group>"; };
 		D76489961956B9A100EF31A4 /* ShapeDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeDAO.swift; sourceTree = "<group>"; };
+		D7F039F1195929A9001689B3 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D7F03A1E195930C7001689B3 /* lynx-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lynx-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D70B54781956C9DA00442B67 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D7F039F1195929A9001689B3 /* MapView.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		D74FCCF7195155B200CE67A9 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +125,7 @@
 		D74FCD02195155B200CE67A9 /* Lynx */ = {
 			isa = PBXGroup;
 			children = (
+				D7F03A20195930CC001689B3 /* Images */,
 				D74FCD3B1952936D00CE67A9 /* Classes */,
 				D74FCD3A1952930900CE67A9 /* Libraries */,
 				D74FCD21195157BB00CE67A9 /* Files */,
@@ -177,10 +192,12 @@
 		D74FCD37195291AE00CE67A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D70B54781956C9DA00442B67 /* Delegates */,
 				D74FCD38195291C800CE67A9 /* RouteListViewController.swift */,
 				D764898A1956A83000EF31A4 /* TripListViewController.swift */,
 				D74FCD1F1951561500CE67A9 /* StationListViewController.swift */,
 				D76489941956B3B100EF31A4 /* ShapeMapViewController.swift */,
+				D70B547B19590F5D00442B67 /* MapDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +218,14 @@
 				D76489961956B9A100EF31A4 /* ShapeDAO.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		D7F03A20195930CC001689B3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D7F03A1E195930C7001689B3 /* lynx-logo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +314,7 @@
 				D76489891956A79600EF31A4 /* calendar.txt in Resources */,
 				D74FCD08195155B200CE67A9 /* Images.xcassets in Resources */,
 				D74FCD3019528FD500CE67A9 /* shapes.txt in Resources */,
+				D7F03A1F195930C7001689B3 /* lynx-logo.png in Resources */,
 				D74FCD23195157C500CE67A9 /* routes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D764898B1956A83000EF31A4 /* TripListViewController.swift in Sources */,
+				D7F039F2195929A9001689B3 /* MapView.swift in Sources */,
 				D76489901956AA4600EF31A4 /* RoutesDAO.swift in Sources */,
 				D74FCD361952909C00CE67A9 /* StopTime.swift in Sources */,
+				D70B547C19590F5D00442B67 /* MapDelegate.swift in Sources */,
 				D74FCD2A19528EB800CE67A9 /* Trip.swift in Sources */,
 				D74FCD39195291C800CE67A9 /* RouteListViewController.swift in Sources */,
 				D74FCD3219528FDA00CE67A9 /* Shape.swift in Sources */,
