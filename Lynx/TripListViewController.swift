@@ -17,8 +17,10 @@ class TripListViewController : UITableViewController {
     
     override func viewDidLoad()  {
         self.title = "Trips"
+        println("loaded trips")
         
         self.trips = TripsDAO().getTripsForRoute(route)
+        println(self.trips)
         
     }
     

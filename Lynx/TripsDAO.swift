@@ -20,8 +20,6 @@ class TripsDAO : CSVDAO {
         
         var tripLines = self.loadCSVLines("trips", type: "txt")
         
-        var stopTimes = self.loadCSVLines("stop_times", type: "txt")
-
         var found = false
         
         var start = 0

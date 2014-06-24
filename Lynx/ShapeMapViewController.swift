@@ -17,6 +17,8 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
     override func viewDidLoad()  {
         var coordinates : CLLocationCoordinate2D[] = []
         
+        
+        
         for shape in shapePoints {
             var annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(28.6614, -81.3919) //shape.coordinate
@@ -32,8 +34,9 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
         
         var polyline : MKPolyline = MKPolyline(coordinates: &coordinates, count: coordinates.count)
         
-        mapView.addOverlay(polyline)
+        mapView.addOverlay(polyline, level: MKOverlayLevel.AboveRoads)
         
+        zoomToPolyline(mapView, polyline: polyline, animated: true)
 
     }
     
@@ -43,6 +46,12 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
         renderer.lineWidth = 5.0
         
         return renderer
+    }
+
+    func zoomToPolyline(mapview : MKMapView, polyline : MKPolyline, animated : Bool) {
+        var polygon = MKPolygon(points: polyline.points(), count: polyline.pointCount)
+
+        mapView.setVisibleMapRect(polyline.boundingMapRect, animated: animated)
     }
 
 }
