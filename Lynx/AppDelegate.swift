@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // Override point for customization after application launch.
 //        self.window!.backgroundColor = UIColor.whiteColor()
 //        self.window!.makeKeyAndVisible()
+        
+        Parse.setApplicationId("NSHEhCgPfwguGBJSG9olaJ2fnZmw70r5bnIDnbsj", clientKey: "30qYCNwqDB0lXZw6ZwTrQyYFAp24rkwIWXaF7xyg")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         return true
     }
 

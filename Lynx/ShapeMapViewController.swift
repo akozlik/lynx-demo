@@ -16,20 +16,10 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad()  {
         var coordinates : CLLocationCoordinate2D[] = []
-        
-        
-        
+
+        // Load up the coordinates from the shape file
         for shape in shapePoints {
-            var annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(28.6614, -81.3919) //shape.coordinate
-            annotation.title = "Something"
-            
-            var region = MKCoordinateRegionMake(annotation.coordinate, MKCoordinateSpanMake(0.1, 0.1))
-            mapView.setRegion(region, animated: false)
-            
             coordinates.append(shape.coordinate)
-            
-            
         }
         
         var polyline : MKPolyline = MKPolyline(coordinates: &coordinates, count: coordinates.count)

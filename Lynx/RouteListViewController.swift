@@ -17,6 +17,16 @@ class RouteListViewController : UITableViewController {
         
         self.title = "Routes"
         
+        var routeQuery = PFQuery(className: "Route")
+        
+        var routes = routeQuery.findObjects()
+        
+        for routeObj in routes {
+            
+        }
+        
+        println(routes)
+        
         self.routes = RoutesDAO().loadRoutesFromCSV()
         
         for route in routes {
