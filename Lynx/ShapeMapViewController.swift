@@ -95,7 +95,8 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
         // set your custom image
         annotationView.image = UIImage(named: "lynx-logo")
         annotationView.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
-        annotationView.centerOffset = CGPointMake(0, -16 / 2);
+//        annotationView.centerOffset = CGPointMake(0, -16 / 2);
+        annotationView.centerOffset = CGPointMake(0, 0)
 
 
         return annotationView;
