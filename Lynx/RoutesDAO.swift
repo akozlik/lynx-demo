@@ -32,21 +32,27 @@ class RoutesDAO : CSVDAO {
         return routes
     }
     
-    func loadRoutesFromParseObjects(objects: PFObject[]) -> Route[] {
+    func loadRoutesFromParseObjects(objects: AnyObject[]) -> Route[] {
         var routes: Route[] = []
         
         for routeObj in objects {
-            
-            var route_id = routeObj.objectForKey("route_id")
-            var route_short_name = routeObj.objectForKey("route_short_name")!
-            var route_long_name = routeObj.objectForKey("route_long_name")!
-            var route_type = routeObj.objectForKey("route_type")!
-            
-            var route = Route(route_id: route_id, route_short_name: route_short_name, route_long_name: route_long_name, route_type: route_type)
-            
-            routes.append(route)
-
+            if routeObj is PFObject {
+                var temp = routeObj as PFObject
+                
+                var route_id = routeObj.objectForKey("route_id") as String
+                route_id = route_id.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+                
+                var route_short_name = routeObj.objectForKey("route_short_name") as String
+                var route_long_name = routeObj.objectForKey("route_long_name") as String
+                var route_type = routeObj.objectForKey("route_type") as String
+                
+                var route = Route(route_id: route_id, route_short_name: route_short_name, route_long_name: route_long_name, route_type: route_type)
+                
+                routes.append(route)
+            }
         }
+        
+        return routes
     }
    
 }

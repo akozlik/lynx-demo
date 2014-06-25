@@ -14,12 +14,27 @@ class TripListViewController : UITableViewController {
     var trips : Trip[] = []
     var shape : Shape = Shape(shape_id: "0", shape_pt_lat: 0.0, shape_pt_lon: 0.0, shape_pt_sequence: "0", shape_dist_traveled: 0.0)
     var shapePoints : Shape[] = []
+    var selectedTrip : Trip = Trip(route_id: "", service_id: "", trip_id: "", direction_id: "", shape_id: "")
     
     override func viewDidLoad()  {
         self.title = "Trips"
         println("loaded trips")
         
-        self.trips = TripsDAO().getTripsForRoute(route)
+        var tripQuery = PFQuery(className: "Trip")
+
+        tripQuery.whereKey("route_id", equalTo: route.route_id)
+        
+
+        var parseTrips = tripQuery.findObjects()
+        
+        println(parseTrips)
+        
+        self.trips = TripsDAO().loadTripsFromParseObjects(parseTrips)
+        
+//        self.trips = TripsDAO().getTripsForRoute(route)
+        
+        
+        
         println(self.trips)
         
     }
@@ -50,9 +65,14 @@ class TripListViewController : UITableViewController {
         var trip = self.trips[indexPath.row]
 
 
-        self.shapePoints = ShapeDAO().getShapePointsForShapeID(trip.shape_id) as Shape[]
+        var shapeQuery = PFQuery(className: "Shape")
+        shapeQuery.whereKey("shape_id", equalTo: trip.shape_id)
         
-
+        var parseShapes = shapeQuery.findObjects()
+        
+        self.shapePoints = ShapeDAO().loadShapesFromParseObjects(parseShapes)
+        self.selectedTrip = trip
+        
         self.performSegueWithIdentifier("shapeMap", sender: self)
 
     }
@@ -61,6 +81,7 @@ class TripListViewController : UITableViewController {
 
         if segue.identifier == "shapeMap" {
             var shapeVC : ShapeMapViewController = segue.destinationViewController as ShapeMapViewController
+            shapeVC.trip = self.selectedTrip
             shapeVC.shapePoints = self.shapePoints
         }
     }

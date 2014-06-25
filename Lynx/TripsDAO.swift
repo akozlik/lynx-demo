@@ -39,7 +39,7 @@ class TripsDAO : CSVDAO {
                 var direction_id = line["direction_id"]!
                 var shape_id = line["shape_id"]!
                 
-                var trip = Trip(route_id: route_id, service_id: service_id, trip_id: trip_id, direction_id: direction_id, shape_id: shape_id, route: route)
+                var trip = Trip(route_id: route_id, service_id: service_id, trip_id: trip_id, direction_id: direction_id, shape_id: shape_id)
                 
                 
                 var found = false;
@@ -64,5 +64,29 @@ class TripsDAO : CSVDAO {
         return trips
         
     }
+    
+    func loadTripsFromParseObjects(objects: AnyObject[]) -> Trip[] {
+        var trips: Trip[] = []
+        
+        for tripObj in objects {
+            if tripObj is PFObject {
+                var temp = tripObj as PFObject
+                
+                var direction_id = tripObj.objectForKey("direction_id") as String
+                var route_id = tripObj.objectForKey("route_id") as String
+                var service_id = tripObj.objectForKey("service_id") as String
+                var shape_id = tripObj.objectForKey("shape_id") as String
+                var trip_id = tripObj.objectForKey("trip_id") as String
+                
+                var trip = Trip(route_id: route_id, service_id: service_id, trip_id: trip_id, direction_id: direction_id, shape_id: shape_id)
+
+                
+                trips.append(trip)
+            }
+        }
+        
+        return trips
+    }
+
     
 }

@@ -19,19 +19,11 @@ class RouteListViewController : UITableViewController {
         
         var routeQuery = PFQuery(className: "Route")
         
-        var routes = routeQuery.findObjects()
+        var parseRoutes = routeQuery.findObjects()
         
-        for routeObj in routes {
-            
-        }
         
-        println(routes)
-        
-        self.routes = RoutesDAO().loadRoutesFromCSV()
-        
-        for route in routes {
-//            println(route.route_long_name)
-        }
+        self.routes = RoutesDAO().loadRoutesFromParseObjects(parseRoutes)
+
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int  {

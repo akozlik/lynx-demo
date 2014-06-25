@@ -13,6 +13,7 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView : MKMapView =  MKMapView()
     
     var shapePoints : Shape[] = []
+    var trip : Trip = Trip(route_id: "", service_id: "", trip_id: "", direction_id: "", shape_id: "")
     
     override func viewDidLoad()  {
         var coordinates : CLLocationCoordinate2D[] = []
@@ -25,6 +26,40 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
         var polyline : MKPolyline = MKPolyline(coordinates: &coordinates, count: coordinates.count)
         
         mapView.addOverlay(polyline, level: MKOverlayLevel.AboveRoads)
+        
+        
+        var timesQuery = PFQuery(className: "StopTime")
+        timesQuery.whereKey("trip_id", equalTo: self.trip.trip_id)
+        
+        var parseTimes = timesQuery.findObjects()
+        
+        var stops : PFObject[] = []
+        
+        for timeObj in parseTimes {
+            if timeObj is PFObject {
+                var temp = timeObj as PFObject
+                var stop_id = timeObj.objectForKey("stop_id") as String
+                
+                var stopQuery = PFQuery(className: "Stop")
+                stopQuery.whereKey("stop_id", equalTo: stop_id)
+                
+                var parseStops = stopQuery.findObjects()
+                
+                for stopObj in parseStops {
+                    if stopObj is PFObject {
+                        var stop = stopObj as PFObject
+                        stops.append(stop)
+                    }
+                }
+            }
+        }
+        
+        println(stops)
+        
+        for stop in stops {
+            var lynxStop = stop as PFObject
+            
+        }
         
         zoomToPolyline(mapView, polyline: polyline, animated: true)
 

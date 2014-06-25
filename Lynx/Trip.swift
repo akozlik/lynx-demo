@@ -15,14 +15,11 @@ class Trip {
     var direction_id : String
     var shape_id : String
     
-    var route : Route
-    
-    init(route_id:String, service_id:String, trip_id:String, direction_id:String, shape_id:String, route: Route) {
+    init(route_id:String, service_id:String, trip_id:String, direction_id:String, shape_id:String) {
         self.route_id = route_id
         self.service_id = service_id
         self.trip_id = trip_id
         self.direction_id = direction_id
         self.shape_id = shape_id
-        self.route = route
     }
 }
