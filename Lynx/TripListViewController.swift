@@ -12,31 +12,20 @@ import UIKit
 class TripListViewController : UITableViewController {
     var route : Route = Route(route_id: "", route_short_name: "", route_long_name: "", route_type: "")
     var trips : Trip[] = []
-    var shape : Shape = Shape(shape_id: "0", shape_pt_lat: 0.0, shape_pt_lon: 0.0, shape_pt_sequence: "0", shape_dist_traveled: 0.0)
+    var shape : Shape = Shape(shape_id: "0", shape_pt_lat: 0.0, shape_pt_lon: 0.0, shape_pt_sequence: 0.0, shape_dist_traveled: 0.0)
     var shapePoints : Shape[] = []
     var selectedTrip : Trip = Trip(route_id: "", service_id: "", trip_id: "", direction_id: "", shape_id: "")
     
     override func viewDidLoad()  {
         self.title = "Trips"
-        println("loaded trips")
         
         var tripQuery = PFQuery(className: "Trip")
 
         tripQuery.whereKey("route_id", equalTo: route.route_id)
-        
-
+    
         var parseTrips = tripQuery.findObjects()
         
-        println(parseTrips)
-        
         self.trips = TripsDAO().loadTripsFromParseObjects(parseTrips)
-        
-//        self.trips = TripsDAO().getTripsForRoute(route)
-        
-        
-        
-        println(self.trips)
-        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int  {
@@ -67,6 +56,7 @@ class TripListViewController : UITableViewController {
 
         var shapeQuery = PFQuery(className: "Shape")
         shapeQuery.whereKey("shape_id", equalTo: trip.shape_id)
+        shapeQuery.limit = 1000
         
         var parseShapes = shapeQuery.findObjects()
         

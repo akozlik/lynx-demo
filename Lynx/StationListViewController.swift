@@ -12,7 +12,7 @@ import UIKit
 class StationListViewController : UITableViewController {
     
     override func viewDidLoad()  {
-        println("Something")
+
     }
     
 }

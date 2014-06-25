@@ -52,8 +52,6 @@ class RouteListViewController : UITableViewController {
 //        Route route = self.routes[0]
         var route = self.routes[indexPath.row]
         
-        println(route.route_long_name)
-        
         var tripListVC : TripListViewController = storyboard.instantiateViewControllerWithIdentifier("TripListViewController") as TripListViewController
         tripListVC.route = route;
         

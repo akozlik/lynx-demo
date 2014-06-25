@@ -13,7 +13,7 @@ class Shape {
     var shape_id : String
     var shape_pt_lat: Double
     var shape_pt_lon : Double
-    var shape_pt_sequence : String
+    var shape_pt_sequence : Double
     var shape_dist_traveled : Double
     var coordinate : CLLocationCoordinate2D
     
@@ -21,12 +21,12 @@ class Shape {
         self.shape_id = ""
         self.shape_pt_lat = 0.0
         self.shape_pt_lon = 0.0
-        self.shape_pt_sequence = ""
+        self.shape_pt_sequence = 0.0
         self.shape_dist_traveled = 0.0
         self.coordinate = CLLocationCoordinate2DMake(self.shape_pt_lat, self.shape_pt_lon)
     }
     
-    init(shape_id:String, shape_pt_lat:Double, shape_pt_lon:Double, shape_pt_sequence:String, shape_dist_traveled:Double) {
+    init(shape_id:String, shape_pt_lat:Double, shape_pt_lon:Double, shape_pt_sequence:Double, shape_dist_traveled:Double) {
         self.shape_id = shape_id
         self.shape_pt_lat = shape_pt_lat
         self.shape_pt_lon = shape_pt_lon

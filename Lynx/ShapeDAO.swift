@@ -28,7 +28,7 @@ class ShapeDAO : CSVDAO {
                 
                 var shape_pt_lat : Double = NSString(line["shape_pt_lat"]!).doubleValue
                 var shape_pt_lon : Double = NSString(line["shape_pt_lon"]!).doubleValue
-                var shape_pt_sequence = line["shape_pt_sequence"]!
+                var shape_pt_sequence = NSString(line["shape_pt_sequence"]!).doubleValue
                 var shape_dist_traveled : Double = NSString(line["shape_dist_traveled"]!).doubleValue
                 
                 var shape = Shape(shape_id: shape_id, shape_pt_lat: shape_pt_lat, shape_pt_lon: shape_pt_lon, shape_pt_sequence: shape_pt_sequence, shape_dist_traveled: shape_dist_traveled)
@@ -56,9 +56,7 @@ class ShapeDAO : CSVDAO {
                 var shape_id = temp.objectForKey("shape_id") as String
                 var shape_pt_lat = temp.objectForKey("shape_pt_lat").doubleValue
                 var shape_pt_lon = temp.objectForKey("shape_pt_lon").doubleValue
-                var shape_pt_sequence = temp.objectForKey("shape_pt_sequence") as String
-                
-                println(shape_pt_lat)
+                var shape_pt_sequence = temp.objectForKey("shape_pt_sequence").doubleValue
 
                 var shape = Shape(shape_id: shape_id, shape_pt_lat: shape_pt_lat, shape_pt_lon: shape_pt_lon, shape_pt_sequence: shape_pt_sequence, shape_dist_traveled: shape_dist_traveled)
                 

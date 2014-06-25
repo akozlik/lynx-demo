@@ -17,9 +17,13 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad()  {
         var coordinates : CLLocationCoordinate2D[] = []
-
+        
         // Load up the coordinates from the shape file
+
+        shapePoints.sort({ $0.shape_pt_sequence < $1.shape_pt_sequence })
+
         for shape in shapePoints {
+            println(shape.shape_pt_sequence)
             coordinates.append(shape.coordinate)
         }
         
@@ -27,38 +31,41 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
         
         mapView.addOverlay(polyline, level: MKOverlayLevel.AboveRoads)
         
-        
+
         var timesQuery = PFQuery(className: "StopTime")
         timesQuery.whereKey("trip_id", equalTo: self.trip.trip_id)
+        timesQuery.limit = 1000
         
         var parseTimes = timesQuery.findObjects()
         
         var stops : PFObject[] = []
         
+        var stopIDs : String[] = []
         for timeObj in parseTimes {
             if timeObj is PFObject {
                 var temp = timeObj as PFObject
                 var stop_id = timeObj.objectForKey("stop_id") as String
                 
-                var stopQuery = PFQuery(className: "Stop")
-                stopQuery.whereKey("stop_id", equalTo: stop_id)
-                
-                var parseStops = stopQuery.findObjects()
-                
-                for stopObj in parseStops {
-                    if stopObj is PFObject {
-                        var stop = stopObj as PFObject
-                        stops.append(stop)
-                    }
-                }
+                stopIDs.append(stop_id)
             }
         }
         
-        println(stops)
-        
-        for stop in stops {
+
+        var stopQuery = PFQuery(className: "Stop")
+        stopQuery.whereKey("stop_id", containedIn: stopIDs)
+        var parseStops = stopQuery.findObjects()
+
+        for stop in parseStops {
             var lynxStop = stop as PFObject
+
+            var lat = lynxStop.objectForKey("stop_lat")?.doubleValue
+            var lon = lynxStop.objectForKey("stop_lon")?.doubleValue
+            var coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
             
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = stop.objectForKey("stop_name") as String
+            mapView.addAnnotation(annotation)
         }
         
         zoomToPolyline(mapView, polyline: polyline, animated: true)
@@ -66,11 +73,30 @@ class ShapeMapViewController : UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
-        var renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor(red: 0.83, green: 0.47, blue: 0.47, alpha: 1)
-        renderer.lineWidth = 5.0
+
+        if overlay is MKPolyline {
+            var renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor(red: 0.83, green: 0.47, blue: 0.47, alpha: 1)
+            renderer.lineWidth = 5.0
+            return renderer
+        }
         
-        return renderer
+        return nil
+    }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView!
+    {
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("MKPinAnnotationView")
+
+        if (!annotationView) {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MKPinAnnotationView")
+        }
+
+        // set your custom image
+        annotationView.image = UIImage(named: "lynx-logo")
+
+        return annotationView;
+
     }
 
     func zoomToPolyline(mapview : MKMapView, polyline : MKPolyline, animated : Bool) {
